@@ -1,17 +1,17 @@
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
+import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
-        // Press Alt+Enter with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        Scanner s = new Scanner(System.in);
+        System.out.println("USPS Simulator (Yahoo)");
+        int actualChoice = 0;
+        while (actualChoice != 1 && actualChoice != 2 && actualChoice != 3 && actualChoice != 4) {
+            System.out.println("So what brings you in today?");
+            System.out.println("1. Calculate the cost of shipping on package\n2. Simulate packages being shipped\n3. See how shipping costs are calculated\n4. Leave");
+            String choice = s.nextLine();
+            actualChoice = Integer.parseInt(choice);
+        }
+        if (actualChoice == 1) {
 
-        // Press Shift+F10 or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
-
-            // Press Shift+F9 to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Ctrl+F8.
-            System.out.println("i = " + i);
         }
     }
 }
