@@ -68,4 +68,8 @@ public class Address {
         String zipcodeForNow = fullAddress.substring(fullAddress.length() - 1);
         zipcode = Integer.parseInt(zipcodeForNow);
     }
+
+    public int getZipcode() {
+        return zipcode;
+    }
 }
