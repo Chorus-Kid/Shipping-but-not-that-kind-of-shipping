@@ -91,5 +91,28 @@ public class Main {
             double totalCost = cost.shippingCost(zipcode1, zipcode2, weight, height, length, width);
             System.out.println("Total cost: " + totalCost);
         }
+        else if (actualChoice == 2) {
+            System.out.println("How many packages do you want to simulate?");
+            String packageNumber = s.nextLine();
+            int number = Integer.parseInt(packageNumber);
+            PackageSimulator uspsSimulatorHeHeHe = new PackageSimulator();
+            uspsSimulatorHeHeHe.generatePackages(number);
+        }
+        else if (actualChoice == 3) {
+            System.out.println("So you wanna figure out how shipping costs are calculated?");
+            System.out.println("Mkay");
+            System.out.println("The base cost of shipping is $3.75");
+            System.out.println("Then we calculate the difference between the first 3 digits of both zipcodes");
+            System.out.println("We take the difference of the zipcodes and then multiply by 0.01 and add that to the cost");
+            System.out.println("Then, we take the weight and add 5 cents for each tenth of a pound");
+            System.out.println("If the package is over 40 pounds, then we add 10 cents for each tenth of a pound after that");
+            System.out.println("Finally, if the total inches of the length, height, and width is over 36 inches, then we add 10 cents for each inch above 36");
+            System.out.println("And voila!");
+            System.out.println("Cost calculated!");
+        }
+        else if (actualChoice == 4) {
+            System.out.println("Bye");
+            System.exit(0);
+        }
     }
 }
